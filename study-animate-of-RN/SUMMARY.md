@@ -1,10 +1,12 @@
 # Summary
 
-* [介绍](README.md)
+* [介绍 React native 动画](README.md)
 * [实现动画的几种方法](method/README.md)
-    * [state & porps](method/state_props.md)
-    * [animate 组件](method/animate.md)
-    * [native 动画](method/native.md)
+    * [setState方法](method/setState.md)
+    * [setNativeProps方法](method/setNativeProps.md)
+    * [LayoutAnimation](method/LayoutAnimation.md)
+    * [Animated组件](method/Animated.md)
+    <!-- * [native动画](method/native.md) -->
 * [代码实例](codes/README.md)
     * [state](codes/state.md)
     * [props](codes/props.md)

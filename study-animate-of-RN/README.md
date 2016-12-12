@@ -11,7 +11,7 @@
 以上的步骤是使用RN的api `Animated` 来实现的。但是实现动画可以通过其他途径达到
 
 ## 在RN实现动画的几种方式
- - requestAnimationFrame
+ - setState
  - setNativeProps
  - LayoutAnimation
  - Animated
