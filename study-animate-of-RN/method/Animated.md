@@ -1,4 +1,4 @@
-# Animated 组件
+# Animated API
 
 `Animated` 给我们三个动画组件：
 - `Animated.View`
@@ -56,4 +56,43 @@ startAnimation() {
         }
     ).start();
 }
+```
+
+## 插值函数
+将输入值范围转换为输出值范围
+```javascript
+...
+style={[styles.animateView,{
+    transform: [
+        {
+            rotate: this.state.rotateValue.interpolate({
+                inputRange: [0, 1],
+                outputRange: ['0deg', '360deg']
+            })
+        }
+    ]
+}]}
+...
+```
+
+## 组合动画
+* parallel（同时执行）
+* sequence（顺序执行）
+* stagger（错峰，插入了delay的parrllel）
+* delay（组合动画之间的延迟方法）
+
+## 循环执行动画
+`start`方法可以接受一个函数，通过监听动画结束，在调用`startAnimation`可以重复执行动画
+
+## 监听当前的动画值
+* `addListener(callback)`：动画执行过程中的值
+* `stopAnimation(callback)`：动画执行结束时的值
+
+```javascript
+this.state.rotateValue.addListener((state) => {   
+    console.log("rotateValue=>" + state.value);
+});
+this.state.rotateValue.stopAnimation((state) => {   
+    console.log("rotateValue=>" + state.value);
+});
 ```
